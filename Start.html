@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neurolink Login</title>
+    <style>
+        /* Line 1-10: Body and page background */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #14202E;
+            
+        }
+
+        /* Top banner styling */
+        .banner {
+            position: absolute; /* Might not need */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            /* background: linear-gradient(90deg, #365A7C, #2B4257); */
+            background: #14202E;
+            display: flex;
+            align-items: center;
+            padding: 20px 20px;
+        }
+
+        .banner img {
+            height: 80px;
+        }
+
+        /* Line 25-38: Login card container */
+        .login-container {
+            background: linear-gradient(160deg,#2B4257,#88A9C3);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            text-align: center;
+            width: 350px;   
+            z-index: 1; /* Ensure it is above banner if overlapping */
+        }
+
+        /* Line 40-48: Headings and inputs */
+        h2 {
+            color: #ffffff;
+            margin-bottom: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 5px #0066ff;
+        }
+
+        /* Line 50-58: Button styling */
+        .primary-btn {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background: #365A7C;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+
+
+        .secondary-btn {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            background: transparent;
+            color: #000000;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        button:hover {
+            background: #88A9C3;
+        }
+
+        /* Line 60-63: Footer */
+        .footer-text {
+            color: #ffffff;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Line 66-72: Top banner with logo -->
+    <div class="banner">
+        <img src="NightLinkLogo.png" alt="Neurolink Logo">
+    </div>
+
+    <!-- Line 74-84: Login card -->
+    <div class="login-container">
+        <h2>Log into NeuroLink</h2>
+        <input type="text" placeholder="Username" id="username">
+        <input type="password" placeholder="Password" id="password">
+        <button class="primary-btn" onclick="login()">Sign In</button>
+        <button class="secondary-btn" onlick="newAccount()">Create a new account</button>
+        <p class="footer-text">© 2025 Neurolink. All rights reserved.</p>
+    </div>
+
+    <!-- Line 86-99: JS for login -->
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if(username && password) {
+                window.location.href = 'home.html'; // Redirect to app home
+            } else {
+                alert('Please enter username and password.');
+            }
+        }
+
+        function newAccount() {
+            window.location.href = 'newAccount.html';
+        }
+    </script>
+
+</body>
+</html>

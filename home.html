@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Night Link</title>
+
+<style>
+/* ---------- BASE ---------- */
+body {
+    margin: 0;
+    background: #091235;
+    color: #F2F5F9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+    height: 72px;
+    background: linear-gradient(180deg, #091235, #14202e);
+    display: flex;
+    align-items: center;
+    padding: 0 32px;
+}
+
+/* ---------- LEFT ---------- */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 260px;
+}
+
+.profile {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-left h2 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.nav-left span {
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+/* ---------- CENTER ---------- */
+.nav-center {
+    display: flex;
+    gap: 40px;
+    margin-left: auto;
+    margin-right:0px;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: #F2F5F9;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    color: #5DA9E9;
+}
+
+/* ---------- RIGHT ---------- */
+.nav-right {
+    min-width: 200px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.primary-action {
+    background: #365A7C;
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.primary-action:hover {
+    background: #406A91;
+}
+
+/* ---------- CONTENT ---------- */
+.content {
+    padding: 32px;
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="nav-left">
+        <button class="logo-btn" onclick="handleClick()">
+            <img class="profile" src="profilePicture.jpg" alt="Profile">
+        </button>
+
+
+        <div>
+            <h2>Night Link</h2>
+            <span>Your Profile</span>
+        </div>
+    </div>
+
+    <nav class="nav-center">
+        <button class="nav-btn">Find</button>
+        <button class="nav-btn">HeatMap</button>
+        <button class="nav-btn">Feature</button>
+        <button class="nav-btn">Feature</button>
+    </nav>
+
+    <div class="nav-right">
+        <button class="primary-action">Button</button>
+    </div>
+
+    <script>
+    function handleClick() {
+        console.log("Logo clicked");
+    }
+    </script>
+</header>
+
+<main class="content">
+    <!-- Page content goes here -->
+</main>
+
+</body>
+</html>
